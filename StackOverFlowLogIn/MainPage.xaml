@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="StackOverFlowLogIn.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StackOverFlowLogIn"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <!--Designed and Developed by Vijay Nirmal(@_Vijay_Nirmal_)-->
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalAlignment="Stretch">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBox Name="EmailTextBox" PlaceholderText="you@example.org" Width="300" Margin="0,0,20,0"/>
+                <Button Name="UserNameButton" Content="User Name Button" Click="UserNameButton_ClickAsync"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <PasswordBox Name="PasswordInputBox" PlaceholderText="********" Width="300" Margin="0,0,20,0"/>
+                <Button Name="PasswordButton" Content="Password Button" Click="PasswordButton_ClickAsync"/>
+            </StackPanel>
+            <Button Name="ClickIt" Content="Log In" Click="ClickIt_ClickAsync"  Margin="0,20,0,0"/>
+        </StackPanel>
+        <WebView Name="webView" Source="https://stackoverflow.com/users/login" Width="1000" Height="1000"/>
+    </StackPanel>
+</Page>
